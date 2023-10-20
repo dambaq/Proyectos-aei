@@ -1,3 +1,12 @@
-from django.test import TestCase
+from Proyecto.wsgi import *
+from modelos.erp.models import Type
 
-# Create your tests here.
+#listar
+
+#Select * from tabla
+query = Type.objects.all()
+print(query)
+
+t = Type()
+t.name = 'Pureksl'
+t.save()

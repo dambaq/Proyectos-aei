@@ -1,0 +1,48 @@
+{% extends "AI-html-1.0.0/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="col-md-12">
+    <div class="card card-default">
+        <div class="card-header">
+            <h3 class="card-title">
+                <i class="fa-solid fa-list"></i>
+                {{title}}
+            </h3>
+        </div>
+
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Numero</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">DPI</th>
+                    <th scope="col">Fecha de Nacimiento</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">User</th>
+                    <th scope="col">Correo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for a in alumnos %}
+                    <tr>
+                        <td>{{ a.id }}</td>
+                        <td>{{ a.names }}</td>
+                        <td>{{ a.dpi }}</td>
+                        <td>{{ a.date }}</td>
+                        <td>{{ a.telefono }}</td>
+                        <td>{{ a.user }}</td>
+                        <td>{{ a.correo }}</td>
+
+                    </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+ 
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
