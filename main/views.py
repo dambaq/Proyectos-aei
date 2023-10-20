@@ -6,3 +6,10 @@ def home(request):
 
 def lista(request):
     return render(request,'AI-html-1.0.0/lista.html')
+
+def iniciar(request):
+    return render(request,'AI-html-1.0.0/iniciar.html')
+def contact(request):
+    return render(request,'AI-html-1.0.0/contact.html')
+def inscripcion(request):
+    return render(request,'AI-html-1.0.0/inscripcion.html')

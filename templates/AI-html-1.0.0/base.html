@@ -49,8 +49,8 @@
     <div class="container-fluid sticky-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark p-0">
-                <a href="index.html" class="navbar-brand">
-                    <h1 class="text-white">AI<span class="text-dark">.</span>Tech</h1>
+                <a href="" class="navbar-brand">
+                    <h1 class="text-white">Guatemala<span class="text-dark">.</span>City</h1>
                 </a>
                 <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
@@ -58,21 +58,21 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="{% url 'lista' %}" class="nav-item nav-link">Lista</a>
-                        <a href="service.html" class="nav-item nav-link">Iniciar sesión</a>
-                        <a href="project.html" class="nav-item nav-link">registrarse</a>
+                        <a href="{% url 'home' %}" class="nav-item nav-link active">Home</a>
+                        <a href="{% url 'lista' %}" class="nav-item nav-link">Lista de Cursos</a>
+                        <a href="{% url 'iniciar' %}" class="nav-item nav-link">Iniciar sesión</a>
+                        <a href="{% url 'inscripcion' %}" class="nav-item nav-link">Inscripcion</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Paginas</a>
                             <div class="dropdown-menu bg-light mt-2">
-                                <a href="feature.html" class="dropdown-item">Features</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="faq.html" class="dropdown-item">FAQs</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
+                                <a href="{% url 'lista' %}" class="dropdown-item">Lista de Cursos</a>
+                                <a href="" class="dropdown-item">Horarios</a>
+                                <a href="https://www.usac.edu.gt/" class="dropdown-item">USAC</a>
+                                <a href="https://portal.ingenieria.usac.edu.gt/" class="dropdown-item">Facultad de Ingenieria</a>
+                                
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="{% url 'contact' %}" class="nav-item nav-link">Contactos</a>
                     </div>
                     <butaton type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
                         data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>

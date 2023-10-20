@@ -1,0 +1,211 @@
+{% extends "AI-html-1.0.0/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- Marco  Start -->
+<div class="container-fluid pt-5 bg-primary hero-header mb-2">
+    <div class="container pt-5">
+        <div class="row g-5 pt-5">
+                 
+        </div>
+    </div>
+</div>
+<!-- Hero End -->
+
+<!-- Inscripcion inicio -->
+
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
+            
+            <h1 class="mb-4">ACADEMIA USAC CREACION DE USUARIO</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <p class="text-center mb-4">Bienvenido a una nueva experiencia, iniciaremos con la creación de tu usuario y tu ficha de inscripcion como nuevo estudiante de nuestra academia, por favor llena todos los datos correctamente.<a></a>    
+                    <div class="wow fadeIn" data-wow-delay="0.3s">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="nombre" placeholder="nombre">
+                                    <label for="nombre">Nombre </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="apellido" placeholder="apellido">
+                                    <label for="apellido">Apellido</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="DPI" placeholder="DPI">
+                                    <label for="DPI">Numero de DPI</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="date" class="form-control" id="Fecha_Nacimiento" placeholder="Fecha_Nacimiento">
+                                    <label for="Fecha_Nacimiento">Fecha de Nacimiento</label>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="edad" placeholder="edad">
+                                    <label for="edad">Edad</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="telfono" placeholder="telfono">
+                                    <label for="telfono">Numero de Telefono</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="Nombre_usuario" placeholder="Nombre_usuario">
+                                    <label for="Nombre_usuario">Nombre de Usuario (debbe ser unico)</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="Direccion" placeholder="Direccion">
+                                    <label for="Direccion">Direccion</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Email">
+                                    <label for="email">Direccion de Correo</label>
+                                </div>
+                            </div>
+                        </div>
+                                <select class="mi-select" id="sexo" name="sexo">
+                                    <option >Sexo</option>
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Femenino">Femenino</option>
+                                </select>
+                                <select class="mi-select" id="estudios" name="estudios">
+                                    <option >Estudios</option>
+                                    <option value="Universitarios">Universitarios</option>
+                                    <option value="Diversificado">Diversificado</option>
+                                    <option value="Basicos">Basicos</option>
+                                </select>
+                                <select class="mi-select" id="centro" name="centro">
+                                    <option >Centro Educativo</option>
+                                    <option value="Universidad de San Carlos">Universidad de San Carlos</option>
+                                    <option value="Otras Universidades">Otras Universidades</option>
+                                    <option value="Colegio">Colegio</option>
+                                    <option value="Institutos o Escuelas Publicas">Institutos o Escuelas Publicas</option>
+                                </select>
+                        <div class="row g-3">
+                            <div class="col-md-8">
+                                <div class="mi-password">
+                                    <input type="password" class="mi-password" id="password" name="contraseña" placeholder="Contraseña">
+                                    <label for="password">Crear Contraseña</label>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="mi-password">
+                                    <input type="password" class="mi-password" id="password" name=confirmar placeholder="contraseña">
+                                    <label for="password">Confirmar Contraseña</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Registrar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Inscripcion End -->
+
+  <!-- Newsletter Start -->
+  <div class="container-fluid bg-primary newsletter py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-md-5 ps-lg-0 pt-5 pt-md-0 text-start wow fadeIn" data-wow-delay="0.3s">
+                <img class="img-fluid" src="{% static 'img/logotipo-usac-inver.png' %}" alt="">
+            </div>
+            <div class="col-md-7 py-5 newsletter-text wow fadeIn" data-wow-delay="0.5s">
+                 <h1 class="text-white mb-4">Id y Enseñad A Todos</h1>
+                
+                <small class="text-white-50">Universidad de San Carlos de Guatemala</small>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Newsletter End -->
+
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white-50 footer pt-5">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                <a href="index.html" class="d-inline-block mb-3">
+                    <h2 class="text-white">ACADEMIA<span class="text-primary">.</span>USAC</h2>
+                </a>
+                <p class="mb-0">Lo maravilloso de aprender algo es que nadie puede arrebatárnoslo</p>
+            </div>
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                <h5 class="text-white mb-4">Ubicación y Contactos</h5>
+                <p><i class="fa fa-map-marker-alt me-3"></i>Edificio T-2, 2do. Nivel Ciudad Universitaria Zona 12</p>
+                <p><i class="fa fa-phone-alt me-3"></i>(502) 24189000</p>
+                <p><i class="fa fa-envelope me-3"></i>academiausac2023@usac.edu.gt</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                <h5 class="text-white mb-4">Enlaces mas populares</h5>
+                <a class="btn btn-link" href="">USAC</a>
+                <a class="btn btn-link" href="">Facualtad de Ingenieria</a>
+                <a class="btn btn-link" href="">Escuela de Mecanica Electrica</a>
+                <a class="btn btn-link" href="">Terminos y condiciones</a>
+                <a class="btn btn-link" href="">Objetivos</a>
+            </div>
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                <h5 class="text-white mb-4">Nuestros Cursos</h5>
+                <a class="btn btn-link" href="">Robotica y Automatisacion</a>
+                <a class="btn btn-link" href="">Machine learning</a>
+                <a class="btn btn-link" href="">Tecnologi IA</a>
+                <a class="btn btn-link" href="">CCNA</a>
+                                </div>
+        </div>
+    </div>
+    <div class="container wow fadeIn" data-wow-delay="0.1s">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="{% url 'home' %}">Academia.USAC</a>, Todo los derechos Reservados.
+
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    Diseñado por los estudiantes, Elvis Linares,200715296 y Damacio Barillas,201806912. </a> Distribuido por La Universidad de San Carlos de Guatemala y La Facultad de Ingeniería, Escuela Mecánica Eléctrica, Curso de Proyectos de computacion Aplicada a I:E</a>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-menu">
+                        <a href="">Home</a>
+                        <a href="">Lista de Cursos</a>
+                        <a href="">Inicio de sesion</a>
+                        <a href="">Inscripcion</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+
+{% endblock %}
