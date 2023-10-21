@@ -29,6 +29,11 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='index.html'), name='home'),
     path('Alumnos/', include('Alumnos.urls')),
  #   path('login/', LoginFormView.as_view()),
+ 
+
+    # Agregar URL para la página de inicio de sesión
+    #path('login/', views.login_view, name='login'),
+    #path('logout/', views.logout_view, name='logout'),
 
 
 

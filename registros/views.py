@@ -4,6 +4,7 @@ from .formularios import Formalumno
 from django.views.generic import View
 from django.contrib.auth import login, logout, authenticate, get_user_model
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 class crearuser(View):
@@ -42,7 +43,7 @@ def iniciar_sesion(request):
 
             if usuario is not None:
                 login(request, usuario)
-                return redirect('home')
+                return redirect('perfil')
             else:
                 messages.error(request,'ususario y/o contraseña incorrecta')
         else:
@@ -50,3 +51,10 @@ def iniciar_sesion(request):
 
     form=AuthenticationForm()
     return render(request,'login/login.html',{'form':form})    
+
+@login_required
+def perfil(request):
+        # Lógica para obtener los datos del estudiante y cursos asignados
+        # ...
+
+        return render(request, 'perfil/perfil.html')
