@@ -16,13 +16,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from modelos.login.views import LoginFormView
+from django.views.generic import TemplateView
+from Alumnos import views as alumnos
+from . import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('main.urls')),
-    path('login/', LoginFormView.as_view()),
-    path('erp/', include('modelos.erp.urls', namespace='erp')),
+    path('registros/', include('registros.urls')),
+    path('', views.home, name= 'home'),
+    path('inscripcion/', views.inscripcion, name= 'inscripcion'),
+    path('', TemplateView.as_view(template_name='index.html'), name='home'),
+    path('Alumnos/', include('Alumnos.urls')),
+ #   path('login/', LoginFormView.as_view()),
+
 
 
 ]
