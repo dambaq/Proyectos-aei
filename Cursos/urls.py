@@ -1,14 +1,14 @@
 from django.urls  import path
-from Alumnos.views import alumnos_list
 from django.conf.urls.static import static
 from django.conf import settings
+from Cursos.views import cursos_list
 
 
 
-app_name = 'Alumnos'
+app_name = 'Cursos'
 
 urlpatterns = [
-    path('alumnos/list/', alumnos_list, name='alumnos_list'),
+    path('cursos/list/', cursos_list, name='list_list'),
 
 
 ]

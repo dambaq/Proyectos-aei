@@ -1,12 +1,14 @@
 {% extends "AI-html-1.0.0/base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 {% load widget_tweaks %}
 {% block content %}
     <form method="post" action="" enctype="multipart/form-data"> 
         {% csrf_token %}
-            {{formextra}}
+            <div style="width: 40%; margin: auto; ">
+            {{formextra|crispy}}
 
-            {{form}}
+            {{form|crispy}}
             
             <button type="submit" class="btn btn-success">Registrar</button> 
             </div>       

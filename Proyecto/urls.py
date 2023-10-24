@@ -28,7 +28,7 @@ urlpatterns = [
     path('inscripcion/', views.inscripcion, name= 'inscripcion'),
     path('', TemplateView.as_view(template_name='index.html'), name='home'),
     path('Alumnos/', include('Alumnos.urls')),
- #   path('login/', LoginFormView.as_view()),
+    path('Cursos/', include('Cursos.urls')),
  
 
     # Agregar URL para la página de inicio de sesión

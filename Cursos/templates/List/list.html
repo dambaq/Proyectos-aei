@@ -1,0 +1,40 @@
+{% extends "AI-html-1.0.0/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="col-md-12">
+    <div class="card card-default">
+        <div class="card-header">
+            <h3 class="card-title">
+                <i class="fa-solid fa-list"></i>
+                {{title}}
+            </h3>
+        </div>
+
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Description</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for curso in cursos %}
+                    <tr>
+                        <td>{{ curso.name }}</td>
+                        <td>{{ curso.descripcion }}</td>
+>
+
+                    </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+ 
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

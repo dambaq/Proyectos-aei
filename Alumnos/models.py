@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from datetime import datetime
 from django.utils import timezone
+from django.contrib.auth.models import AbstractUser
+
 
 
 class Type(models.Model):...
@@ -25,4 +27,5 @@ class Alumnos(models.Model):
         verbose_name_plural = 'alumnos'
 
     def __str__(self):
-        return self.names
+        return self.name
+
