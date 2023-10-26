@@ -1,0 +1,51 @@
+{% extends "AI-html-1.0.0/base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Vista del Curso</title>
+    <style>
+        .course-view {
+            display: flex;
+            align-items: center;
+        }
+
+        .course-image {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .course-info {
+            flex: 2;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="course-view">
+        <div class="course-image">
+            <img src="{{curso.imagen.url}}" alt="Imagen del curso">
+        </div>
+        <div class="course-info">
+            <h1>{{curso.name}}</h1>
+            <p>{{curso.descripcion}}</p>
+            <ul>
+                <li>{{curso.name}}</li>
+                <li>{{curso.descripcion}}</li>
+                <li>Precio: $99.99</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+
+{% endblock %}

@@ -21,15 +21,10 @@
                   </tr>
                 </thead>
                 <tbody>
-                    {% for curso in noasignados %}
+                    {% for curso in cursos %}
                     <tr>
                         <td>{{ curso.name }}</td>
                         <td>{{ curso.descripcion }}</td>
-                        {% if user.is_authenticated %}
-                        <td><a class="btn btn-success" href="{% url 'asignar_alumno' curso.id user.id %}" class="nav-item nav-link active">Asignar</a></td>
-
-                        
-                        {% endif %}
 
 
                     </tr>

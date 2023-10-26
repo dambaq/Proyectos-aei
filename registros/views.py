@@ -7,6 +7,7 @@ from django.contrib.auth import login, logout, authenticate, get_user_model
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.utils.translation import gettext as _
+from Cursos.models import Cursos, Asignacion
 
 from django.shortcuts import get_object_or_404
 
@@ -72,8 +73,15 @@ def iniciar_sesion(request):
 
 @login_required
 def perfil(request):
-        # Lógica para obtener los datos del estudiante y cursos asignados
+    usuario = request.user
+    asignaciones = Asignacion.objects.filter(alumno=usuario)
+    asignados = [asignacion.cursos for asignacion in asignaciones]# Lógica para obtener los datos del estudiante y cursos asignados
         # ...
-
-        return render(request, 'perfil/perfil.html')
-
+    return render(request, 'perfil/perfil.html', {'asignados': asignados})
+ 
+def informacion(request):
+    usuario = request.user
+    asignaciones = Asignacion.objects.filter(alumno=usuario)
+    asignados = [asignacion.cursos for asignacion in asignaciones]# Lógica para obtener los datos del estudiante y cursos asignados
+        # ...
+    return render(request, 'perfil/informacion.html', {'asignados': asignados})

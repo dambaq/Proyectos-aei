@@ -21,13 +21,16 @@
                   </tr>
                 </thead>
                 <tbody>
-                    {% for curso in noasignados %}
+                    {% for curso in asignados %}
                     <tr>
                         <td>{{ curso.name }}</td>
                         <td>{{ curso.descripcion }}</td>
                         {% if user.is_authenticated %}
-                        <td><a class="btn btn-success" href="{% url 'asignar_alumno' curso.id user.id %}" class="nav-item nav-link active">Asignar</a></td>
-
+                        
+                        <td><a class="btn btn-danger" href="{% url 'desasignar_alumno' curso.id user.id %}" class="nav-item nav-link active"onclick="mostrarMensaje()">Desasignar</a></td>
+                        <div id="mensaje" class="alert alert-success" style="display: none;">
+                            Curso desasignado
+                        </div>
                         
                         {% endif %}
 

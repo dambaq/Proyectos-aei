@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Asignar Alumno a Curso</title>
+</head>
+<body>
+    <h1>Asignar Alumno a {{ curso.nombre }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Asignar">
+    </form>
+</body>
+</html>

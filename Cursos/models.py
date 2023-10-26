@@ -13,6 +13,7 @@ class Cursos(models.Model):
     name = models.CharField(max_length=15)
     descripcion = models.CharField(max_length= 100)
     imagen = models.ImageField(upload_to='cursos', null=True, blank=True)
+    disponibilidad= models.BooleanField(default= True)
     created = models.DateField(default=timezone.now)
     updated = models.DateField(default=timezone.now)
 

@@ -3,6 +3,7 @@
 {% load widget_tweaks %}
 {% block content %}
 <!DOCTYPE html>
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -71,7 +72,7 @@
         </p>
 
         <div class="text-center">
-        <a href="https://infoestudiantes.ingenieria.usac.edu.gt/inicio" class="btn btn-sm btn-primary">Ir a información</a>
+        <a href="{% url 'informacion' %}" class="btn btn-sm btn-primary">Ir a información</a>
         </div>
     </div>
 </div>
@@ -92,7 +93,7 @@
         </p>
 
         <div class="text-center">
-        <a href="https://asignacion.ingenieria.usac.edu.gt/semestre/asignacion" class="btn btn-sm btn-primary">Ir a Asignación</a>
+        <a href="{% url 'list_list' %}" class="btn btn-sm btn-primary">Ir a Asignación</a>
         </div>
     </div>
 </div>
@@ -114,7 +115,7 @@
         </p>
 
         <div class="text-center">
-        <a href="https://asignacion.ingenieria.usac.edu.gt/desasignacion" class="btn btn-sm btn-primary">Ir a Desasignaciones</a>
+        <a href="{% url 'list_listdes' %}" class="btn btn-sm btn-primary">Ir a Desasignaciones</a>
         </div>
     </div>
 </div>
