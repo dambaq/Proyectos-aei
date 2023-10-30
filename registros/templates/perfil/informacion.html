@@ -3,25 +3,30 @@
 {% load widget_tweaks %}
 {% block content %}
 <div class="container">
-    <div style="width: 75%; margin: 20px auto; text-align: center; color: gray; font-size: larger;">
-        <a style="color: white">Debe iniciar sesión para asignarse</a>
-    </div>
     <div class="row">
         {% for curso in asignados %}
             <div class="col-md-3">
                 <div class="card" style="width: 100%; margin: 20px 20px;">
-                    <img src="{{curso.imagen.url}}" class="card-img-top">
+                    <img src="{{ curso.imagen.url }}" class="card-img-top">
                     <div class="card-body" style="text-align: center; color: rgb(48, 44, 44)">
-                        <h7 class="card-title"><b>{{curso.name}}</h7></b><br>
-                        <h7 class="card-title">{{curso.descripcion}}</h7><br><br>
-                        <p class="card-title">Q&nbsp;{{curso.precio}}</p>
+                        <h7 class="card-title"><b>{{ curso.name }}</h7></b><br>
+                        <h7 class="card-title">{{ curso.descripcion }}</h7><br><br>
+                        <p class="card-title">&nbsp;{{ curso.horario }}</p>
+                        <p class="card-title">
+                            &nbsp;Nota: 
+                            {% for asignacion in asignaciones %}
+                                {% if asignacion.curso.id == curso.id %}
+                                    {{ asignacion.nota }}
+                                {% endif %}
+                            {% endfor %}
+                        </p>
                     </div>
-                    <div class="card-footer text-center" >
+                    <div class="card-footer text-center">
                         <a href="{% url 'vista_cursos' curso.id %}" class="btn btn-success" style="margin: 0px 0px 0px -10px;">Informacion</a>
                     </div>
                 </div>
             </div>
-        {% endfor%}
+        {% endfor %}
     </div>
 </div>
 <div style="width: 75%; margin: 40px auto; text-align: center; color: gray;">

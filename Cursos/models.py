@@ -14,6 +14,8 @@ class Cursos(models.Model):
     descripcion = models.CharField(max_length= 100)
     imagen = models.ImageField(upload_to='cursos', null=True, blank=True)
     disponibilidad= models.BooleanField(default= True)
+    costo = models.FloatField(default=0.0)
+    horario = models.CharField(max_length=20, default="Sin horario")
     created = models.DateField(default=timezone.now)
     updated = models.DateField(default=timezone.now)
 
