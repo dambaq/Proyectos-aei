@@ -63,7 +63,7 @@ def desasignar_alumno(request, curso_id, user_id):
 
 def vistacursos(request, curso_id):
     curso=Cursos.objects.get(id=curso_id)
-
+    
     return render(request, 'list/cursosindividuales.html', {'curso':curso})
 
 @login_required
